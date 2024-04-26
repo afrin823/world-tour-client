@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h2> my Client side</h2>
+    
     </>
   )
 }
