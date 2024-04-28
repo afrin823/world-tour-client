@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
-import { useContext } from "react";
-import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import Footer from "../Footer/Footer";
+import useAuth from "../../hook/useAuth";
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser} = useAuth()
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
       const onSubmit = data => {

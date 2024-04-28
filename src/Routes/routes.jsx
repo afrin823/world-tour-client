@@ -7,11 +7,14 @@ import Register from "../Components/Register/Register";
 import AddTuristList from "../Components/AssTuristList/AddTuristList";
 import AllTuristSport from "../Components/AllTuristSport/AllTuristSport";
 import MyList from "../Components/MyList/MyList";
+import SocialLogIn from "../Components/Register/SocialLogIn";
+import PrivetRoute from "../Components/privetRoute/PrivetRoute";
 
   const routes = createBrowserRouter([
     {
       path: "/",
-      element: <Home></Home>,
+      element: 
+        <Home></Home>   
     },
     {
       path: '/login',
@@ -23,7 +26,9 @@ import MyList from "../Components/MyList/MyList";
     },
     {
       path: '/addTuristList',
-      element: <AddTuristList></AddTuristList>
+      element: <PrivetRoute>
+      <AddTuristList></AddTuristList>
+      </PrivetRoute>
     },
     {
       path: '/allTuristSport',
@@ -32,6 +37,10 @@ import MyList from "../Components/MyList/MyList";
     {
       path: '/myList',
       element: <MyList></MyList>
+    },
+    {
+      path: '/socialLogIn',
+      element: <SocialLogIn></SocialLogIn>
     }
   ]);
 

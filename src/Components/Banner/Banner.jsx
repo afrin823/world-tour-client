@@ -17,7 +17,7 @@ const Banner = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
     return (
-        <div className='mx-auto w-11/12  my-6'>
+        <div className='mx-auto w-11/12  my-12'>
             <Swiper
         spaceBetween={30}
         centeredSlides={true}

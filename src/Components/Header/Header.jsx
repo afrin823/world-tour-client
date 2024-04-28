@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import useAuth from "../../hook/useAuth";
 
 const Header = () => {
+
+    const {logOut, user} = useAuth();
+    console.log(user)
      
     const links = <>
     <li className="text-xl text-white"><a href="/">Home</a></li>
@@ -28,21 +32,29 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-             
-                 <div className="w-10 rounded-full">
-                 <Link to={`/Login`}>
-                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> 
-                </Link>               
+              {
+                user? <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-24 rounded-full">
+                 <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </label>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <button className="btn btn-sm btn-ghost">Afrin</button>
+                </li>
+                <li>
+                  <button onClick={logOut}
+                  className="btn btn-warning text-white">logout</button>
+                </li>
+                </ul>
               </div>
-            
+              :
+              <Link to={'/login'}><button className="btn btn-warning text-white">LogIn</button></Link>
+              };            
             </div>
-          <Link to="/login">
-          <button className="btn bg-[#f6b93b] text-2xl text-white" >Log In</button>
-          </Link>
-          
         </div>
-      </div>
+     
     );
 };
 

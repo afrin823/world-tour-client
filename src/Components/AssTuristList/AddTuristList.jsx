@@ -12,4 +12,4 @@ const AddTuristList = () => {
     );
 };
 
-export default AddTuristList;
+export default AddTuristList

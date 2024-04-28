@@ -1,17 +1,14 @@
 import Header from "../Header/Header";
-import { IoLogoGoogleplus } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import Footer from "../Footer/Footer";
+import useAuth from "../../hook/useAuth";
+import SocialLogIn from "../Register/SocialLogIn";
 
 
 
 const Login = () => {
-    const {signInUser} = useContext(AuthContext);
+    const { signInUser } = useAuth()
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const onSubmit = (data) => {
@@ -45,25 +42,19 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })}   
-           />
-           {errors.password && <span className="text-red-500">This field is required</span>}
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          <input type="password" placeholder="Password" className="input input-bordered" 
+          {...register("password", { required: true })}           
+          />
+          {errors.password && <span className="text-red-500">This field is required</span>}
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-warning text-white text-xl">Login</button>
         </div>
         <p className="text-center">Dont have an Account 
            <Link className="text-[blue]" to={'/register'}> Register</Link></p>        
-        <hr className="mt-2 bg-[#2d2d2d]"/>
-        <div className="flex items-center justify-center gap-2">           
-        <IoLogoGoogleplus className="text-4xl"/>
-        <FaGithub className="text-3xl"/>
-        <FaFacebook className="text-3xl" />
-        </div>
+        <SocialLogIn></SocialLogIn>
       </form>
+    
     </div>
             </div>
             <Footer></Footer>
