@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import { useForm } from "react-hook-form";
 import Footer from "../Footer/Footer";
@@ -6,15 +6,21 @@ import useAuth from "../../hook/useAuth";
 
 
 const Register = () => {
-    const {createUser} = useAuth()
-    const { register, handleSubmit, formState: { errors }, } = useForm();
+    const {createUser, updateUserProfile} = useAuth();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const form = location?.state || '/';
 
       const onSubmit = data => {
-        const {email, password}= data
-        createUser(email,password)
-        .then(result => {
-            console.log(result);
-        })
+        const {email, password, image, name}= data;
+        createUser(email,password).then(() => {
+            updateUserProfile(name, image).then(() => {
+                    navigate(form);              
+            });          
+        });
       };
 
     return (

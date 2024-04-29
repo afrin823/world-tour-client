@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Footer from "../Footer/Footer";
 import useAuth from "../../hook/useAuth";
@@ -8,7 +8,13 @@ import SocialLogIn from "../Register/SocialLogIn";
 
 
 const Login = () => {
-    const { signInUser } = useAuth()
+    const { signInUser } = useAuth();
+
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const form = location?.state || '/';
+
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const onSubmit = (data) => {
@@ -16,11 +22,10 @@ const Login = () => {
 
       signInUser(email, password)
       .then(result => {
-        console.log(result.user);
-      })
-      .catch(error => {
-        console.log(error)
-      })
+        if(result.user){
+            navigate(form);
+        }
+    })
     };
 
     return (

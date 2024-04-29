@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, GithubAuthProvider,TwitterAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider,TwitterAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../firebase/firebaseConfig";
 
@@ -14,27 +14,41 @@ const twitterProvider = new TwitterAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    console.log(user);
+   const [loading, setLoading] = useState(true);
+   console.log(loading)
     
     
     //create users
     const createUser = (email, password) => {
+      setLoading(true)
        return createUserWithEmailAndPassword(auth, email, password)
     }
+    //update user profile
+    const updateUserProfile = (name, image) => {
+     return updateProfile(auth.currentUser, {
+         displayName: name,
+          photoURL: image
+       })
+    }
+
      //sign in user
      const signInUser = (email, password) => {
+      setLoading(true)
        return  signInWithEmailAndPassword(auth, email, password)
      }
      //google log in
      const googleLogIn = () => {
+      setLoading(true)
         return signInWithPopup(auth, googleProvider)
      }
      //Github log in
      const githubLogIn = () => {
+      setLoading(true)
         return signInWithPopup(auth, githubProvider)
      }
      //Twitter log in
      const twitterLogIn = () => {
+      setLoading(true)
         return signInWithPopup(auth, twitterProvider)
      }
      
@@ -45,11 +59,13 @@ const AuthProvider = ({ children }) => {
      }
     //observer
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+       const unSubscribe =  onAuthStateChanged(auth, (user) => {
             if (user) {
             setUser(user)
+            setLoading(false);
             }
           });
+          return () => unSubscribe();
     }, [])
 
     const AllValues = {
@@ -59,7 +75,9 @@ const AuthProvider = ({ children }) => {
         githubLogIn,
         logOut,
         user,
-        twitterLogIn
+        twitterLogIn,
+        updateUserProfile,
+        loading
     }
 
     return (

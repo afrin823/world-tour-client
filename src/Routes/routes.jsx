@@ -4,11 +4,11 @@ import {
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Register/Register";
-import AddTuristList from "../Components/AssTuristList/AddTuristList";
 import AllTuristSport from "../Components/AllTuristSport/AllTuristSport";
 import MyList from "../Components/MyList/MyList";
 import SocialLogIn from "../Components/Register/SocialLogIn";
 import PrivetRoute from "../Components/privetRoute/PrivetRoute";
+import AddTuristList from "../Components/AddTuristList/AddTuristList";
 
   const routes = createBrowserRouter([
     {
@@ -26,9 +26,8 @@ import PrivetRoute from "../Components/privetRoute/PrivetRoute";
     },
     {
       path: '/addTuristList',
-      element: <PrivetRoute>
-      <AddTuristList></AddTuristList>
-      </PrivetRoute>
+      element: <AddTuristList></AddTuristList>
+     
     },
     {
       path: '/allTuristSport',
@@ -36,7 +35,9 @@ import PrivetRoute from "../Components/privetRoute/PrivetRoute";
     },
     {
       path: '/myList',
-      element: <MyList></MyList>
+      element:  <PrivetRoute>
+      <MyList></MyList>
+      </PrivetRoute>
     },
     {
       path: '/socialLogIn',
