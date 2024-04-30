@@ -14,7 +14,8 @@ import AddTuristList from "../Components/AddTuristList/AddTuristList";
     {
       path: "/",
       element: 
-        <Home></Home>   
+        <Home></Home>,
+        loader: () => fetch('http://localhost:5000/country')  
     },
     {
       path: '/login',

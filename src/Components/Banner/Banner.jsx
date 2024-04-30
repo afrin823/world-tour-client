@@ -34,38 +34,38 @@ const Banner = () => {
         className="mySwiper rounded"
       >
         <SwiperSlide>
-            <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/JdNhYtJ/360-F-308388341-kzx-K7d31-ZYO7-Fm-BClx-Jm-Yu-ZZb6dn6a3g.jpg)'}}>
+            <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/cCj4rYP/australia-beautiful-places-sydney-harbour.jpg)'}}>
             <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Incredible Scenery</h1>
-                <p className="mb-5">- The sun-lit sky and sea blend perfectly into each other. - The awe-inspiring sun danced in from <br />the horizon. .</p>
-                <button className="btn btn-warning text-xl px-8">See More</button>
+                <h1 className="mb-5 text-5xl font-bold ">Australia </h1>
+                <p className="mb-5 ">- The sun-lit sky and sea blend perfectly into each other. - The awe-inspiring sun danced in from <br />the horizon. .</p>
+                <button className="btn btn-warning text-xl px-8 text-white">See More</button>
                 </div>
             </div>
             </div>
                     
         </SwiperSlide>
         <SwiperSlide>
-        <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/GdX344c/co-do-hoa-lu.jpg)'}}>
+        <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/nMCv5Zd/360-F-431797063-t-UEOKp-IXp-BH3c-G6-Gx0xk-E73b-Eiwg-C3-Qv.jpg)'}}>
             <div className="hero-overlay"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Incredible Scenery</h1>
+                <h1 className="mb-5 text-5xl font-bold">Bangladesh</h1>
                 <p className="mb-5">- The sun-lit sky and sea blend perfectly into each other. - The awe-inspiring sun danced in from <br />the horizon. .</p>
-                <button className="btn btn-warning px-8 text-xl">See More</button>
+                <button className="btn btn-warning px-8 text-xl text-white">See More</button>
                 </div>
             </div>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/phTKFP9/image-useful-self-sufficient-1-day-travel-experience-in-ninh-binh-165365711661688.jpg)'}}>
+        <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/bzvyn7K/Dubai-Skylines-at-night-Pexels-3787839.jpg)'}}>
             <div className="hero-overlay bg-opacity-10"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">Incredible Scenery</h1>
+                <h1 className="mb-5 text-5xl font-bold">Dubai</h1>
                 <p className="mb-5">- The sun-lit sky and sea blend perfectly into each other. - The awe-inspiring sun danced in from <br />the horizon. .</p>
-                <button className="btn btn-warning px-8 text-xl" >See More</button>
+                <button className="btn btn-warning px-8 text-xl text-white" >See More</button>
                 </div>
             </div>
             </div>

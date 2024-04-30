@@ -24,7 +24,7 @@ const Header = () => {
             {links}
             </ul>
           </div>
-          <img className=" w-60" src="https://i.ibb.co/7yJbh38/Screenshot-56.png" alt="" />
+          <img className=" w-52" src="https://i.ibb.co/xzZN6YD/Screenshot-59-removebg-preview.png" alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
