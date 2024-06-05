@@ -1,12 +1,11 @@
 import useAuth from "../../hook/useAuth";
 import { IoLogoGoogleplus } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 
 const SocialLogIn = () => {
-    const { googleLogIn, githubLogIn, twitterLogIn } = useAuth();
+    const { googleLogIn, githubLogIn } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     const form = location?.state || '/';
@@ -28,8 +27,7 @@ const SocialLogIn = () => {
                 className=""><IoLogoGoogleplus className="text-4xl"/></button>
                 <button onClick={() => handelSocialLogIn(githubLogIn)}
                 className=""><FaGithub className="text-3xl"/></button>
-                <button onClick={() => handelSocialLogIn(twitterLogIn)}
-                className=""><FaTwitter  className="text-3xl"/></button>
+                
             </div>
         </div>
     );

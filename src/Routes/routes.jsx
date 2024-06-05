@@ -9,6 +9,10 @@ import MyList from "../Components/MyList/MyList";
 import SocialLogIn from "../Components/Register/SocialLogIn";
 import PrivetRoute from "../Components/privetRoute/PrivetRoute";
 import AddTuristList from "../Components/AddTuristList/AddTuristList";
+import Details from "../Components/Details/Details";
+
+
+
 
   const routes = createBrowserRouter([
     {
@@ -29,10 +33,11 @@ import AddTuristList from "../Components/AddTuristList/AddTuristList";
       path: '/addTuristList',
       element: <AddTuristList></AddTuristList>
      
-    },
+    }, 
     {
       path: '/allTuristSport',
-      element: <AllTuristSport></AllTuristSport>
+      element: <AllTuristSport></AllTuristSport>,
+      loader: () => fetch('http://localhost:5000/country') 
     },
     {
       path: '/myList',
@@ -43,7 +48,14 @@ import AddTuristList from "../Components/AddTuristList/AddTuristList";
     {
       path: '/socialLogIn',
       element: <SocialLogIn></SocialLogIn>
-    }
+    },
+    {
+      path: '/details/:id',
+      element: <Details></Details>,
+      loader: ({params}) => fetch(`http://localhost:5000/country/one/${params.id}`)    
+    },
+    
+
   ]);
 
 

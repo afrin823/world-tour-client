@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Swal from 'sweetalert2'
 
 const AddTuristList = () => {
+
+    const {user} = useContext(AuthContext);
+    // console.log(user?.email);
+    const email = user?.email;
 
     const handelAddProduct = event => {
         event.preventDefault();
@@ -19,7 +25,7 @@ const AddTuristList = () => {
         const totaVisitorsPerYear = form.totaVisitorsPerYear.value;
         const description = form.description.value;
 
-        const newCountry = { countryName, touristsSpotName, location, averageCost, session, travelTime, photoUrl, totaVisitorsPerYear, description }
+        const newCountry = { countryName, touristsSpotName, location, averageCost, session, travelTime, photoUrl, totaVisitorsPerYear, description, email}
 
         console.log(newCountry)
 
@@ -51,8 +57,8 @@ const AddTuristList = () => {
         <div>
             <Header></Header>
 
-            <div className="bg-[#F4F3F0] p-24">
-                <h1 className="text-3xl font-extrabold text-center">Add Tourists Spot</h1>            
+            <div className="bg-[#F4F3F0] p-24 w-4/5 mx-auto m-8 shadow rounded">
+                <h1 className="text-3xl font-extrabold text-center text-warning">__Add Tourists Spot__</h1> <br />           
                     <form onSubmit={handelAddProduct}>
                         <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
@@ -115,7 +121,7 @@ const AddTuristList = () => {
                                 <span className="label-text">Description:</span>
                             </label>
                             <input type="text" name="description" placeholder="Tourists Spot Name" className="input input-bordered w-full" required />
-                        </div>    
+                        </div>  <br />  
                       <input type="submit" value="Add Spots" className="btn btn-block bg-warning text-white"/>
                     </form>
            
