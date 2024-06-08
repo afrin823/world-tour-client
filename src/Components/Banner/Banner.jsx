@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import  { useRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '../../../public/style.css';
@@ -17,7 +17,7 @@ const Banner = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
     return (
-        <div className='mx-auto w-11/12  my-12'>
+        <div className='mx-auto w-11/12  my-12 mt-0'>
             <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,7 +34,7 @@ const Banner = () => {
         className="mySwiper rounded"
       >
         <SwiperSlide>
-            <div className="hero min-h-[500px] rounded" style={{backgroundImage: 'url(https://i.ibb.co/cCj4rYP/australia-beautiful-places-sydney-harbour.jpg)'}}>
+            <div className="hero min-h-[500px]  rounded" style={{backgroundImage: 'url(https://i.ibb.co/cCj4rYP/australia-beautiful-places-sydney-harbour.jpg)'}}>
             <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

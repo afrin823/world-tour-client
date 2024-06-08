@@ -1,7 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Header from "../Header/Header";
 import { useForm } from "react-hook-form";
-import Footer from "../Footer/Footer";
 import useAuth from "../../hook/useAuth";
 
 
@@ -24,9 +22,9 @@ const Register = () => {
       };
 
     return (
-        <div>
-            <Header></Header>
-            <div className="w-96 mx-auto my-4">
+        <div className="mt-0 py-36">
+        
+            <div className="w-96 mx-auto ">
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form  onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-3xl text-center">Please Register</h2>
@@ -77,7 +75,7 @@ const Register = () => {
    
     </div>
         </div>
-        <Footer></Footer>
+     
         </div>
     );
 };

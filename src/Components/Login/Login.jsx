@@ -1,7 +1,5 @@
-import Header from "../Header/Header";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import Footer from "../Footer/Footer";
 import useAuth from "../../hook/useAuth";
 import SocialLogIn from "../Register/SocialLogIn";
 
@@ -29,9 +27,9 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <Header></Header>
-            <div className="w-96 mx-auto my-14">
+        <div className="py-36">
+        
+            <div className=" w-96 mx-auto ">
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleSubmit(onSubmit)} className="card-body">
         <div className="form-control">
@@ -62,7 +60,7 @@ const Login = () => {
     
     </div>
             </div>
-            <Footer></Footer>
+      
         </div>
         
     );

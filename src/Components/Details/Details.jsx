@@ -1,7 +1,3 @@
-// import { useLoaderData, useParams } from "react-router-dom";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-
 import { useLoaderData } from "react-router-dom";
 
 
@@ -12,12 +8,11 @@ const Details = () => {
     const { countryName, touristsSpotName, location, averageCost, session, travelTime, photoUrl, totaVisitorsPerYear, description } = country;
     
 
-    // const showAllCountry = allCountrys.find(showAllCountry => showAllCountry._id === _id);
-    // console.log(showAllCountry);
+    
     return (
         <div>
-             <Header></Header>
-             <div className="mt-8 w-[90%] mx-auto">
+       
+             <div className="mt-0 w-[90%] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="w-full  bg-slate-100 rounded-xl">
             <img className="w-full  mx-auto p-8" src={photoUrl} alt="" />
@@ -47,7 +42,7 @@ const Details = () => {
         </div>
         
         </div>
-       <Footer></Footer>
+  
         </div>
     );
 };

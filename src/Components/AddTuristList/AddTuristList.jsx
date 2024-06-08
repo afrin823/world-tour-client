@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
 import Swal from 'sweetalert2'
+import Type from "../Update/Type";
 
 const AddTuristList = () => {
 
@@ -30,7 +29,7 @@ const AddTuristList = () => {
         console.log(newCountry)
 
         //send data to server
-        fetch('http://localhost:5000/country', {
+        fetch('https://turisom.vercel.app/country', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -55,10 +54,9 @@ const AddTuristList = () => {
 
     return (
         <div>
-            <Header></Header>
-
-            <div className="bg-[#F4F3F0] p-24 w-4/5 mx-auto m-8 shadow rounded">
-                <h1 className="text-3xl font-extrabold text-center text-warning">__Add Tourists Spot__</h1> <br />           
+     
+            <div className="bg-[#F4F3F0] p-24 w-4/5 mx-auto m-8 shadow rounded mt-0">
+             <Type></Type>         
                     <form onSubmit={handelAddProduct}>
                         <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
@@ -122,13 +120,13 @@ const AddTuristList = () => {
                             </label>
                             <input type="text" name="description" placeholder="Tourists Spot Name" className="input input-bordered w-full" required />
                         </div>  <br />  
-                      <input type="submit" value="Add Spots" className="btn btn-block bg-warning text-white"/>
+                      <input type="submit" value="Add Spots" className="btn btn-block bg-gradient-to-r from-red-500  via-blue-500 to-green-500 text-white"/>
                     </form>
            
             </div>
 
 
-            <Footer></Footer>
+         
         </div>
     );
 };

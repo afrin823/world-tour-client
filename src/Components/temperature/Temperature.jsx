@@ -3,96 +3,88 @@
 const Temperature = () => {
     return (
         <div>
-            <h1 className="text-3xl font-bold text-center">__Temprerature__</h1>
-            <div className="m-20 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div className="flex flex-col items-center p-8 rounded-md w-60 sm:px-12 dark:bg-gray-50 dark:text-gray-800 shadow">
-	<div className="text-center">
-		<h2 className="text-xl font-semibold">USA</h2>
-		<p className="text-sm dark:text-gray-600">July 29</p>
+			<div className="dark:bg-gray-100 dark:text-gray-800">
+	<div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+		<div className="max-w-3xl mx-auto text-center">
+			<h2 className="text-3xl font-extrabold sm:text-4xl">All the features you want</h2>
+			<p className="mt-4 text-lg dark:text-gray-600">Pellentesque viverra, leo id euismod laoreet, nunc risus molestie orci, vel faucibus quam justo id mauris.</p>
+		</div>
+		<dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Quisque at urna</dt>
+					<dd className="mt-2 dark:text-gray-600">Vivamus ultricies bibendum tortor, molestie imperdiet justo cursus eu. Donec quis arcu magna. Integer tempor egestas dolor.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Quisque eu dui lacinia</dt>
+					<dd className="mt-2 dark:text-gray-600">Quisque ultricies volutpat sapien nec varius. Sed sit amet justo vestibulum, efficitur risus quis, gravida libero.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Mauris dignissim</dt>
+					<dd className="mt-2 dark:text-gray-600">Phasellus nec molestie arcu. Proin dictum, lorem mollis rutrum efficitur, lectus velit pharetra elit, et dictum purus nibh auctor velit.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Proin nulla eros</dt>
+					<dd className="mt-2 dark:text-gray-600">Sed ornare ultricies gravida. Morbi egestas dolor turpis, ornare laoreet est vehicula non.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Proin dictum</dt>
+					<dd className="mt-2 dark:text-gray-600">Lorem mollis rutrum efficitur, lectus velit pharetra elit, et dictum purus nibh auctor velit.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Quisque eu dui lacinia</dt>
+					<dd className="mt-2 dark:text-gray-600">Cras a mauris tincidunt, scelerisque justo sit amet, hendrerit est. Fusce venenatis diam fringilla metus convallis, at dapibus enim congue.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Cras vel bibendum tellus</dt>
+					<dd className="mt-2 dark:text-gray-600">Curabitur molestie neque ac massa pulvinar, nec sollicitudin nunc consequat. Donec mattis orci eros, vitae porttitor risus pretium eget.</dd>
+				</div>
+			</div>
+			<div className="flex">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="flex-shrink-0 w-6 h-6 dark:text-violet-600">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				<div className="ml-3">
+					<dt className="text-lg font-medium">Dignissim magna</dt>
+					<dd className="mt-2 dark:text-gray-600">Cras ac lectus erat. Curabitur condimentum luctus nisi, non lacinia ipsum.</dd>
+				</div>
+			</div>
+		</dl>
 	</div>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-32 h-32 p-6 dark:text-yellow-600 fill-current">
-		<path d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z"></path>
-		<rect width="32" height="48" x="240" y="16"></rect>
-		<rect width="32" height="48" x="240" y="448"></rect>
-		<rect width="48" height="32" x="448" y="240"></rect>
-		<rect width="48" height="32" x="16" y="240"></rect>
-		<rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
-		<rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
-		<rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)"></rect>
-		<rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
-	</svg>
-	<div className="mb-2 text-3xl font-semibold">32°
-		<span className="mx-1 font-normal">/</span>20°
-	</div>
-	<p className="dark:text-gray-600">Partly cloudy</p>
 </div>
-
-<div className="flex flex-col items-center p-8 rounded-md w-60 sm:px-12 dark:bg-gray-50 dark:text-gray-800 shadow">
-	<div className="text-center">
-		<h2 className="text-xl font-semibold">Canada</h2>
-		<p className="text-sm dark:text-gray-600">July 29</p>
-	</div>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-32 h-32 p-6 dark:text-yellow-600 fill-current">
-		<path d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z"></path>
-		<rect width="32" height="48" x="240" y="16"></rect>
-		<rect width="32" height="48" x="240" y="448"></rect>
-		<rect width="48" height="32" x="448" y="240"></rect>
-		<rect width="48" height="32" x="16" y="240"></rect>
-		<rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
-		<rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
-		<rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)"></rect>
-		<rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
-	</svg>
-	<div className="mb-2 text-3xl font-semibold">32°
-		<span className="mx-1 font-normal">/</span>20°
-	</div>
-	<p className="dark:text-gray-600">Partly cloudy</p>
-</div>
-
-<div className="flex flex-col items-center p-8 rounded-md w-60 sm:px-12 dark:bg-gray-50 dark:text-gray-800 shadow">
-	<div className="text-center">
-		<h2 className="text-xl font-semibold">Mexico</h2>
-		<p className="text-sm dark:text-gray-600">July 29</p>
-	</div>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-32 h-32 p-6 dark:text-yellow-600 fill-current">
-		<path d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z"></path>
-		<rect width="32" height="48" x="240" y="16"></rect>
-		<rect width="32" height="48" x="240" y="448"></rect>
-		<rect width="48" height="32" x="448" y="240"></rect>
-		<rect width="48" height="32" x="16" y="240"></rect>
-		<rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
-		<rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
-		<rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)"></rect>
-		<rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
-	</svg>
-	<div className="mb-2 text-3xl font-semibold">32°
-		<span className="mx-1 font-normal">/</span>20°
-	</div>
-	<p className="dark:text-gray-600">Partly cloudy</p>
-</div>
-
-<div className="flex flex-col items-center p-8 rounded-md w-60 sm:px-12 dark:bg-gray-50 dark:text-gray-800 shadow">
-	<div className="text-center">
-		<h2 className="text-xl font-semibold">Argentina</h2>
-		<p className="text-sm dark:text-gray-600">July 29</p>
-	</div>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-32 h-32 p-6 dark:text-yellow-600 fill-current">
-		<path d="M256,104c-83.813,0-152,68.187-152,152s68.187,152,152,152,152-68.187,152-152S339.813,104,256,104Zm0,272A120,120,0,1,1,376,256,120.136,120.136,0,0,1,256,376Z"></path>
-		<rect width="32" height="48" x="240" y="16"></rect>
-		<rect width="32" height="48" x="240" y="448"></rect>
-		<rect width="48" height="32" x="448" y="240"></rect>
-		<rect width="48" height="32" x="16" y="240"></rect>
-		<rect width="32" height="45.255" x="400" y="393.373" transform="rotate(-45 416 416)"></rect>
-		<rect width="32.001" height="45.255" x="80" y="73.373" transform="rotate(-45 96 96)"></rect>
-		<rect width="45.255" height="32" x="73.373" y="400" transform="rotate(-45.001 96.002 416.003)"></rect>
-		<rect width="45.255" height="32.001" x="393.373" y="80" transform="rotate(-45 416 96)"></rect>
-	</svg>
-	<div className="mb-2 text-3xl font-semibold">32°
-		<span className="mx-1 font-normal">/</span>20°
-	</div>
-	<p className="dark:text-gray-600">Partly cloudy</p>
-</div>
-            </div>
         </div>
     );
 };

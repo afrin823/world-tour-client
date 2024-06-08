@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const CountryCard = ({ countrys }) => {
     const { countryName, touristsSpotName, location, averageCost, session, travelTime, photoUrl, totaVisitorsPerYear, description, _id } = countrys;
     console.log(_id);
+    
     return (
         <div>
                 <div className="card w-96 mx-auto bg-base-100 shadow-xl">
