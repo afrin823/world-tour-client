@@ -38,18 +38,17 @@ import Root from "../Components/Root/Root";
       },
       {
         path: '/addTuristList',
-        element: <AddTuristList></AddTuristList>
+        element: <PrivetRoute><AddTuristList></AddTuristList></PrivetRoute>
        
       }, 
       {
         path: '/allTuristSport',
-        element: <AllTuristSport></AllTuristSport>,
+        element: <PrivetRoute><AllTuristSport></AllTuristSport></PrivetRoute>,
         loader: () => fetch('https://turisom.vercel.app/country') 
       },
       {
         path: '/myList',
-        element:  
-        <MyList></MyList>
+        element:  <PrivetRoute><MyList></MyList></PrivetRoute>
       },
       {
         path: '/countryCard',
@@ -63,7 +62,7 @@ import Root from "../Components/Root/Root";
       },
       {
         path: '/details/:id',
-        element: <Details></Details>,
+        element: <PrivetRoute><Details></Details></PrivetRoute>,
         loader: ({params}) => fetch(`https://turisom.vercel.app/country/one/${params.id}`)    
       },
       {
