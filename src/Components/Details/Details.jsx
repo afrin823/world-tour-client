@@ -12,7 +12,7 @@ const Details = () => {
     return (
         <div>
        
-             <div className="mt-0 w-[90%] mx-auto">
+             <div className="mt-0 w-full pt-36 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="w-full  bg-slate-100 rounded-xl">
             <img className="w-full  mx-auto p-8" src={photoUrl} alt="" />

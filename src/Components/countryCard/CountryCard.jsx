@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CountryCard = ({ countrys }) => {
-    const { countryName, touristsSpotName, location, averageCost, session, travelTime, photoUrl, totaVisitorsPerYear, description, _id } = countrys;
+    const { countryName,  averageCost,  photoUrl, totaVisitorsPerYear, description, _id } = countrys;
     console.log(_id);
     
     return (

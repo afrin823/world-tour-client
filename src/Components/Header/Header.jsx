@@ -25,8 +25,12 @@ const Header = () => {
   const links = <>
     <li className="text-xl text-white"><a href="/">Home</a></li>
     <li className="text-xl text-white"><a href="/allTuristSport">AllTourists Spot</a></li>
-    <li className="text-xl text-white"><a href="/addTuristList">AddTourists Spot</a></li>
-    <li className="text-xl text-white"><a href="/myList">MyList</a></li>
+    {
+      user && <li className="text-xl text-white"><a href="/addTuristList">AddTourists Spot</a></li>
+    }
+   {
+    user &&  <li className="text-xl text-white"><a href="/myList">MyList</a></li>
+   }
   </>
 
   return (

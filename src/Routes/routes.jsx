@@ -38,12 +38,12 @@ import Root from "../Components/Root/Root";
       },
       {
         path: '/addTuristList',
-        element: <PrivetRoute><AddTuristList></AddTuristList></PrivetRoute>
+        element:<AddTuristList></AddTuristList>
        
       }, 
       {
         path: '/allTuristSport',
-        element: <PrivetRoute><AllTuristSport></AllTuristSport></PrivetRoute>,
+        element: <AllTuristSport></AllTuristSport>,
         loader: () => fetch('https://turisom.vercel.app/country') 
       },
       {

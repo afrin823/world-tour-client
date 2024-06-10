@@ -13,25 +13,15 @@ const PrivetRoute = ({ children }) => {
     }
 
 
-    if(!user){
+    if(user){
         
-        return <div>
-               
-            <Navigate to={'/login'} state={location?.pathname || '/'}></Navigate>
-          
-        </div>
+    return children
       
     
     }
-    return (
-        <div>
-        
-        
-            { children }
-           
-           
-        </div>
-    );
-};
 
+
+    return  <Navigate to='/login' state={location?.pathname || '/'}></Navigate>
+  
+};
 export default PrivetRoute;
