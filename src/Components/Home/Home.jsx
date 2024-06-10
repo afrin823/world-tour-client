@@ -20,7 +20,7 @@ const Home = () => {
       <div className="!mt-0 ">
       <Type></Type>
 
-        <div className="m-20 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
+        <div className="m-20  grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {
             allCountrys.slice(0,6).map(countrys => <CountryCard
               key={countrys._id}

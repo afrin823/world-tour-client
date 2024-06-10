@@ -1,7 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 import ShowTuristSports from "../showTuristSports/ShowTuristSports";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 import { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 
@@ -20,7 +18,6 @@ const AllTuristSport = () => {
     console.log(sort);
     return (
         <div>
-            <Header></Header>
             <div className="text-center ">
                 <div className="dropdown mt-28">
                     <div tabIndex={0} role="button" className="badge badge-outline p-4 badge-secondary">
@@ -64,10 +61,7 @@ const AllTuristSport = () => {
             </div>
 
 
-
-
-            <Footer></Footer>
-        </div>
+       </div>
     );
 };
 

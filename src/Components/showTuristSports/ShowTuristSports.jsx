@@ -8,19 +8,19 @@ const ShowTuristSports = ({ countrys }) => {
     return (
         <div>
                  <div>
-                <div className="card w-96 mx-auto bg-base-100 shadow-xl">
+                <div className="card w-full h-full mx-auto bg-gradient-to-r from-red-400  via-gren-300 to-blue-400 shadow-xl">
                 <figure>
                     <img className="w-full  h-64" src={photoUrl} alt="" />
                 </figure>                
-                <div className="card-body">
+                <div className="card-body text-justify">
                     <h2 className="card-title">
                     Spots:{countryName}                 
                     </h2>
                     <p className="text-base">Average Cost: <span className="text-sm text-gray-700">{averageCost}</span> </p>
                     <p className="text-base">Session: <span className="text-sm text-gray-700">{session}</span> </p>
-                    <p className="text-base">Location: <FaMapMarkerAlt /><span className="text-sm text-gray-700">{location}</span> </p>
-                    <p className="text-base">Travel time: <span className="text-sm text-gray-700">{travelTime}<FaRegClock /></span> </p>
+                    <div className="text-base flex">Location: <FaMapMarkerAlt /><span className="text-sm text-gray-700">{location}</span> </div>
 
+                    <div className="text-base m-1 flex items-center">Travel time: &nbsp;<FaRegClock /> <span className="text-sm text-gray-700"> {travelTime}</span> </div>
                     <div className="card-actions justify-end">
                     <Link to={`/details/${_id}`}><button className="btn btn-warning text-white">View Details</button></Link>
                     </div>

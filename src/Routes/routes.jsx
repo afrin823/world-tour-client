@@ -67,7 +67,7 @@ import Root from "../Components/Root/Root";
       },
       {
         path: '/update/:id',
-        element: <Update></Update>,
+        element: <PrivetRoute><Update></Update></PrivetRoute>,
         loader: ({params}) => fetch(`https://turisom.vercel.app/country/one/${params.id}`) 
       }
     ]

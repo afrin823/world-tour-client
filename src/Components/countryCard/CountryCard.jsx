@@ -6,7 +6,7 @@ const CountryCard = ({ countrys }) => {
     
     return (
         <div>
-                <div className="card w-96 mx-auto bg-base-100 shadow-xl">
+                <div className="card w-full h-full ml-6 mx-auto bg-gradient-to-r from-red-400  via-gren-300 to-blue-400  shadow-xl">
                 <figure>
                     <img className="w-full  h-64" src={photoUrl} alt="" />
                 </figure>                
