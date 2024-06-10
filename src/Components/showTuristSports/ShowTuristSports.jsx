@@ -8,7 +8,7 @@ const ShowTuristSports = ({ countrys }) => {
     return (
         <div>
                  <div>
-                <div className="card w-full h-full mx-auto bg-gradient-to-r from-red-400  via-gren-300 to-blue-400 shadow-xl">
+                <div className="card w-full h-full mx-auto bg-gradient-to-r from-gray-400  via-blue-200 to-gray-400  shadow-xl">
                 <figure>
                     <img className="w-full  h-64" src={photoUrl} alt="" />
                 </figure>                
