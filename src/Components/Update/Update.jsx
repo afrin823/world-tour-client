@@ -7,13 +7,13 @@ import Type from "./Type";
 
 
 const Update = () => {
-    const { user } = useContext(AuthContext); 
-          
+    const { user } = useContext(AuthContext);
+
     const updateSpot = useLoaderData();
 
- 
-    
-    console.log(updateSpot); 
+
+
+    console.log(updateSpot);
 
     const { countryName, touristsSpotName, location, averageCost, session, travelTime, photoUrl, totaVisitorsPerYear, description, _id } = updateSpot;
 
@@ -38,7 +38,7 @@ const Update = () => {
         console.log(newCountry);
 
 
-        fetch(`https://turist-server-62kir9amm-afrins-projects.vercel.app//country/update1/${_id}`, {
+        fetch(`https://turist-server-62kir9amm-afrins-projects.vercel.app/country/update1/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -64,7 +64,7 @@ const Update = () => {
     return (
         <div>
 
-            <div className="bg-[#F4F3F0] p-24 w-4/5 mx-auto m-8 shadow rounded mt-0">
+            <div className=" p-24 w-4/5 mx-auto m-8 shadow rounded mt-0">
                 {/* todo some thing */}
                 <Type />
                 <form onSubmit={handleUpdate}>

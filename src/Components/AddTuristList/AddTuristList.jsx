@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from 'sweetalert2'
-import Type from "../Update/Type";
+import AddText from "./AddText";
 
 const AddTuristList = () => {
 
@@ -55,8 +55,8 @@ const AddTuristList = () => {
     return (
         <div>
      
-            <div className="bg-[#F4F3F0] p-24 w-4/5 mx-auto m-8 shadow rounded mt-0">
-             <Type></Type>         
+            <div className=" p-24 w-4/5 mx-auto m-8 shadow rounded mt-0">
+            <AddText></AddText>    
                     <form onSubmit={handelAddProduct}>
                         <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">

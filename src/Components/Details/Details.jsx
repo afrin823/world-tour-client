@@ -18,25 +18,22 @@ const Details = () => {
             <img className="w-full  mx-auto p-8" src={photoUrl} alt="" />
         </div>
         <div className="cols-span-1">
-            <h2 className="text-4xl font-bold mb-2">country: {countryName}</h2>
-            <h3 className="text-xl mb-3">session: {session}</h3>
+            <h2 className="text-4xl font-bold mb-2 text-gray-300">country: {countryName}</h2>
+            <h3 className="text-xl mb-3 text-gray-300">session: {session}</h3>
             <hr />
-            <h2 className="text-xl my-2 font-bold">Cost: {averageCost}</h2>
+            <h2 className="text-xl my-2 font-bold text-gray-300">Cost: {averageCost}</h2>
             <hr />
-            <p className="my-2 text-justify"><span className="font-bold">Lcation: {location}</span> </p>
-            <p className="my-2 text-justify"><span className="font-bold">Spot: {touristsSpotName}</span> </p>
-            <p className="my-2 text-justify"><span className="font-bold">Year: {totaVisitorsPerYear}</span> </p>
-            <p className="my-2 text-justify"><span className="">Description: {description}</span> </p>
-            <div className="flex mt-2 my-3"><span className="">travelTime: {travelTime}</span> 
-                 <div className="card-actions gap-4">
-                        <div className="badge py-2 font-medium px-4 bg-slate-100 text-[#4cd137]"></div>
-                        <div className="badge  font-medium py-2 px-4 bg-slate-100 text-[#4cd137]"></div>
-                    </div>
+            <p className="my-2 text-justify text-gray-300"><span className="font-bold">Lcation: {location}</span> </p>
+            <p className="my-2 text-justify text-gray-300"><span className="font-bold text-gray-300">Spot: {touristsSpotName}</span> </p>
+            <p className="my-2 text-justify text-gray-300"><span className="font-bold">Year: {totaVisitorsPerYear}</span> </p>
+            <p className="my-2 text-justify text-gray-300"><span className="">Description: {description}</span> </p>
+            <div className="flex mt-2 my-3 text-gray-300"><span className="">travelTime: {travelTime}</span> 
+            
             </div>
             <hr />
            
             <div className="flex gap-4 my-12">
-            <button  className="btn w-full btn-accent text-white">View Details</button>
+            <button  className="btn w-full btn-accent text-gray-300">View Details</button>
             </div>
         </div>
         </div>

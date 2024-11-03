@@ -36,13 +36,13 @@ console.log(countries);
             <div className="pt-28">
             {
                countries.map(country => (
-                <div className=" p-4 w-3/4 mx-auto  border border-4 bg-gradient-to-r from-red-500  via-blue-500 to-green-500 text-white m-2 mt-0 rounded-lg" key={country.id}>
+                <div className=" p-4 w-3/4 mx-auto  border-4 border-accent text-white m-2 mt-0 rounded-lg" key={country.id}>
                    <div className="flex justify-between">
-                   <h2>Name:{country.countryName}</h2>
-                    <h2>Spot:{country.touristsSpotName}</h2>
-                    <h2>Cost:{country.averageCost}</h2>
+                   <h2 className="text-xl">Name: {country.countryName}</h2>
+                    <h2  className="text-xl">Spot: {country.touristsSpotName}</h2>
+                    <h2  className="text-xl">Cost: {country.averageCost}</h2>
                     <Link to={`/update/${country._id}`}>
-                    <buttton className="btn m-2"><FaEdit /></buttton>
+                    <button className="btn m-2"><FaEdit /></button>
                     </Link>
                     <buttton
                     onClick={() => handleDelete(country._id)}
