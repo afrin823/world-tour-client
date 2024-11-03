@@ -75,7 +75,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-    
+        <img className="w-52" src="https://i.ibb.co/yhDWYgz/Screenshot-59-removebg-preview-removebg-preview.png" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
