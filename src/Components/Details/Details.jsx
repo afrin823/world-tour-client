@@ -31,7 +31,7 @@ const Details = () => {
             
             </div>
             <hr />
-           
+           {/* details  */}
             <div className="flex gap-4 my-12">
             <button  className="btn w-full btn-accent text-gray-300">View Details</button>
             </div>
